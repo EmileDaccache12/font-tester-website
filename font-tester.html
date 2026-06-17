@@ -9,6 +9,7 @@
                 family=Great+Vibes&family=Lato:wght@100;300;400&family=Roboto:wght@100;400&family=Open+Sans&family=
                 Montserrat&family=Pacifico&family=Playfair+Display&family=Bungee&display=swap" rel="stylesheet">
 
+    <link id="link" rel="stylesheet">
     <style>
         body {
                 display: flex;
@@ -55,6 +56,7 @@
             color: red;
             font-size: 400%;
             font-weight: bold;
+            font-family: sans-serif;
         }
 
         #text:hover {
@@ -77,6 +79,25 @@
             }
         }
     </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded" , function() {
+            const userinput = document.getElementById("userinput");
+            const text = document.getElementById("text");
+            const link = document.getElementById("link");
+
+            userinput.addEventListener("input" , function() {
+                let font = userinput.value.trim();
+                if (!font) return;
+
+                let googlefont = font.replace(/ /g, "+");
+
+                link.href = `https://fonts.googleapis.com/css2?family=${googlefont}&display=swap`;
+                text.style.fontFamily = `${font}, sans-serif`;
+            })
+
+        })
+    </script>
 </head>
 <body>
     <div id="container">
