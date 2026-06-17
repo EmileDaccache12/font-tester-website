@@ -25,7 +25,6 @@
         #container {
             width: fit-content;
             height: 75vh;
-            
         }
 
         #content {
@@ -70,13 +69,18 @@
     <div id="container">
         <h1 id="title"><b>FONT TESTER</b></h1>
         <div id="content">
-            <h2><b>Type Your Font Below</b></h2>
+            <h2><b>Type a Font Below or<br>Choose From the Popular Fonts</b></h2>
             <br><br>
             
-            <input type="text" name="userinput" id="userinput" placeholder="ex: Caviat">
-            <br><br>
-            
-            
+            <input type="text" id="userinput" list="fonts" placeholder="Ex: caveat">
+
+            <datalist id="fonts">
+                <option value="placeholder" disabled>Popular Fonts</option>
+                <option value="Roboto">
+                <option value="Open Sans">
+                <option value="Montserrat">
+                <option value="Bungee">
+            </datalist>
         </div>
     </div>
 </body>
